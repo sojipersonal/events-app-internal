@@ -69,6 +69,7 @@ app.delete('/event/like', (req, res) => {
 });
 
 app.use((err, req, res, next) => {
+    var i=1;
     console.error(err.stack);
     res.status(500).json({ message: err.message });
 });
